@@ -7,7 +7,7 @@ pipeline{
     NEXUS= credentials('Nexus')
     MAJOR_VERSION = "1.0"
   }
-  
+
   stages {
     stage('Create an archive file'){
       steps{
