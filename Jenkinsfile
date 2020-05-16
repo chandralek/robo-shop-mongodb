@@ -12,7 +12,7 @@ pipeline{
     stage('Create an archive file'){
       steps{
         sh '''
-          tar -cvf mongodb-service-${MAJOR_VERSION}-${BUILD_NUMBER} catalogue.js user.js
+          tar -cvf mongodb-service-${MAJOR_VERSION}-${BUILD_NUMBER} catalogue.js users.js
 '''
       }
     }
