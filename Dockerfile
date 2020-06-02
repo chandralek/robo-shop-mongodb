@@ -1,8 +1,8 @@
 FROM    centos:7
 COPY    mongo.repo /etc/yum.repos.d/mongodb-org-4.2.repo
 RUN     yum install -y mongodb-org bind-utils nc
-COPY    catalogue.js /
-COPY    users.js  /
-COPY    run.sh /
+COPY    catalogue.js /tmp
+COPY    users.js  /tmp
+COPY    run.sh /tmp
 RUN     chmod +x /run.sh
-CMD     echo "hello"
+CMD     /tmp/run.sh
