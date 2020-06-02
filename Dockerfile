@@ -1,6 +1,6 @@
 FROM    centos:7
-COPY    mongo.repo /etc/yum.repos.d/mongodb-org-4.2.repo
-RUN     yum install -y mongodb-org bind-utils nc
+COPY    mongodb.repo /etc/yum.repos.d
+RUN     yum install mongodb-org bind-utils nc git -y
 COPY    catalogue.js /tmp
 COPY    users.js  /tmp
 COPY    run.sh /tmp
