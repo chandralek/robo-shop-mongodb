@@ -20,6 +20,7 @@ if [ $? -ne 0 ] ;then
     sleep 30
     continue
 fi
+sleep 120
 mongo --host ${MONGO_DB_URL} < /tmp/users.js
 mongo --host ${MONGO_DB_URL}< /tmp/catalogue.js
 exit $?
